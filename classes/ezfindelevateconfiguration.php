@@ -7,6 +7,11 @@
 
 class eZFindElevateConfiguration extends eZPersistentObject
 {
+    public $searchQuery;
+
+    public $contentObjectId;
+
+    public $languageCode;
     /**
      * XML string used to generate the elevate confguration for Solr.
      *
