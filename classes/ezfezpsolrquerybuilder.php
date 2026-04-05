@@ -235,6 +235,7 @@ class ezfeZPSolrQueryBuilder
 					$searchTimestamp = strtotime( '-1 year' );
 				break;
 			}
+   // @phpstan-ignore variable.undefined
 			$filterQuery[] = eZSolr::getMetaFieldName( 'published' ) . ':[' . ezfSolrDocumentFieldBase::preProcessValue( $searchTimestamp, 'date' ) .'/DAY TO *]';
 		}
 
@@ -1363,6 +1364,7 @@ class ezfeZPSolrQueryBuilder
                 }
             }
 
+            // @phpstan-ignore empty.variable
             if ( !empty( $queryPart ) )
             {
                 foreach ( $queryPart as $key => $value )
