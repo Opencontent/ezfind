@@ -15,7 +15,6 @@ class eZFindResultNode extends eZContentObjectTreeNode
         parent::__construct( $rows );
         if ( isset( $rows['id'] ) )
         {
-            // @phpstan-ignore property.notFound
             $this->ContentObjectID = $rows['id'];
         }
         $this->LocalAttributeValueList = array();

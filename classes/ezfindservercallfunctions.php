@@ -39,7 +39,6 @@ class eZFindServerCallFunctions
         $param = array( 'SearchOffset' => $searchOffset,
                         'SearchLimit' => $searchLimit+1,
                         'SortArray' => array( 'score', 0 ),
-                        // @phpstan-ignore variable.undefined
                         'SearchSubTreeArray' => $search_sub_tree_array
                       );
 
@@ -55,7 +54,6 @@ class eZFindServerCallFunctions
         }
 
         $solr = new eZSolr();
-        // @phpstan-ignore variable.undefined
         $searchList = $solr->search( $searchStr, $param );
 
         $result = array();
@@ -88,7 +86,6 @@ class eZFindServerCallFunctions
                         $tmp = array();
                         if ( $key2 != '' )
                         {
-                            // @phpstan-ignore variable.undefined
                             $tmp[] = $baseSearchUrl . '?SearchText=' . $searchStr . '&filter[]=' . $facetData['queryLimit'][$key2] . '&activeFacets[' . $defaultFacet['field'] . ':' . $defaultFacet['name'] . ']=' . $facetName;
                             $tmp[] = $facetName;
                             $tmp[] = "(" . $facetData['countList'][$key2] . ")";

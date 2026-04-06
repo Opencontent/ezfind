@@ -47,7 +47,6 @@ class ezfSolrDocumentFieldName
     {
         if ( empty( self::$PHPCreator ) )
         {
-            // @phpstan-ignore class.nameCase
             self::$PHPCreator = new eZPHPCreator( eZDIR::path( array( eZSys::storageDirectory(),
                                                                       ezfSolrDocumentFieldName::LOOKUP_FILEDIR ) ),
                                                   ezfSolrDocumentFieldName::LOOKUP_FILENAME );

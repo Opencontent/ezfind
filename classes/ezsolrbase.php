@@ -81,7 +81,6 @@ class eZSolrBase
             }
         }
 
-        // @phpstan-ignore variable.undefined
         return $this->SearchServerURI . $request . '?' . implode( '&', $encodedQueryParams );
     }
 
@@ -110,7 +109,6 @@ class eZSolrBase
                 $encodedQueryParams[] = urlencode( $name ) . '=' . urlencode( $value );
             }
         }
-        // @phpstan-ignore variable.undefined
         return implode( '&', $encodedQueryParams );
     }
 
