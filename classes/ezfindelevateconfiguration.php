@@ -313,6 +313,7 @@ class eZFindElevateConfiguration extends eZPersistentObject
         if ( $languageCode !== null )
             $conds['language_code'] = $languageCode;
 
+        // @phpstan-ignore variable.undefined
         // @phpstan-ignore staticMethod.void
         return parent::removeObject( self::definition(), $conds );
     }
